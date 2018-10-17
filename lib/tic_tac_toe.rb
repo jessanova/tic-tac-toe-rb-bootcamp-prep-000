@@ -14,9 +14,15 @@ def play(board)
   until over?(board)
     turn(board)
   end
-  winner(board)=="X" ? puts "Congratulations X!" 
-    : winner(board)=="O" ? puts "Congratulations Y!"
-    : puts "Cat's Game!"
+  #winner(board)=="X" ? puts "Congratulations X!" 
+  #  : winner(board)=="O" ? puts "Congratulations O!"
+  #  : puts "Cat's Game!"
+  if winner(board) == "X"
+    puts "Congratulations X!"
+  elsif winner(board) == "O"
+    puts "Congratulations O!"
+  else puts "Cat's Game!"
+  end#if
 end
   
 def display_board(board)
