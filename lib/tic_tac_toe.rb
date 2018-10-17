@@ -71,3 +71,26 @@ def won?(board)
     combo.all?{|position| board[position] == "O"}
   } 
 end #won
+
+def full?(board)
+  board.all?{|position| (position=="X")||(position=="O")}
+end #full
+
+def draw?(board)
+  full?(board) ? 
+                won?(board) ? nil : TRUE
+                : nil 
+end #draw
+
+def over?(board)
+  won?(board)||full?(board)||draw?(board) 
+end #over
+
+def winner(board)
+  #won?(board).all?{|position| position=="X" ? "X" : position=="O" ? "O" : nil }
+  if !won?(board).nil?
+  won?(board).all?{|position| board[position] == "X"} ? "X" 
+    : won?(board).all?{|position| board[position] == "O"} ? "O" 
+    : nil
+  end#if
+end #winner
