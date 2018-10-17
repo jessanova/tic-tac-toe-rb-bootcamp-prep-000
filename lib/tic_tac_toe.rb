@@ -36,3 +36,12 @@ end
 def position_taken?(board, index)
   !((board[index]==" ") || (board[index].to_s.empty?) || (board[index].nil?))
 end
+
+def valid_move?(board,index)
+  if(index.between?(0,8))
+    if( (board[index]==" ") || (board[index].to_s.empty?) || (board[index].nil?))
+      return TRUE
+    end
+  end
+  return false
+end
