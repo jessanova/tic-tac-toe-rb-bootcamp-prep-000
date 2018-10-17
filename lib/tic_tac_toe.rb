@@ -96,5 +96,5 @@ def winner(board)
 end #winner
 
 def blank?(place)
-  (place = " ") || (place.to_s.empty?) || (place.nil?)
+  (place == " ") || (place.to_s.empty?) || (place.nil?)
 end
