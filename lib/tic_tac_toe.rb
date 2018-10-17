@@ -14,6 +14,8 @@ def play(board)
   until over?(board)
     turn(board)
   end
+  winner(board)=="X" ? puts "Congratulation X!" 
+    : winner(board)=="O" ?
 end
   
 def display_board(board)
