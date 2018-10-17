@@ -53,3 +53,9 @@ def turn(board)
   move(board, index)
   display_board(board)
 end
+
+def turn_count(board)
+  turn = 0
+  board.each{|place| blank?(place) ? nil : turn+=1}
+  turn
+end
