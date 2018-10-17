@@ -33,3 +33,6 @@ def move(board, index, player)
   #display_board(board)
 end
 
+def position_taken?(board, index)
+  !((board[index]==" ") || (board[index].to_s.empty?) || (board[index].nil?))
+end
