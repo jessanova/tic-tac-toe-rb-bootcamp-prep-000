@@ -24,7 +24,7 @@ def input_to_index(input)
   return index
 end
 
-def move(board, index, player="X")
+def move(board, index, player)
   if(valid_move?(board,index))
     board[index]=player
     return board
