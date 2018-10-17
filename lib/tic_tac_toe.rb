@@ -11,7 +11,9 @@ WIN_COMBINATIONS=[
   ]
   
 def play(board)
-  
+  until over?(board)
+    turn(board)
+  end
 end
   
 def display_board(board)
@@ -50,11 +52,11 @@ def valid_move?(board,index)
   return false
 end
 
-def turn(board) #<=========== Need to alternate player here
+def turn(board) 
   puts "Please enter 1-9:"
   input = gets.strip
   index=input_to_index(input)
-  move(board, index, "X") #<=========== Need to alternate player here
+  move(board, index, current_player(board)) 
   display_board(board)
 end
 
