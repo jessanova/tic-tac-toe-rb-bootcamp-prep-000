@@ -32,3 +32,4 @@ def move(board, index, player)
   turn(board)
   #display_board(board)
 end
+
