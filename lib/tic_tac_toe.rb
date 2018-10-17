@@ -23,3 +23,12 @@ def input_to_index(input)
   index=input-1
   return index
 end
+
+def move(board, index, player="X")
+  if(valid_move?(board,index))
+    board[index]=player
+    return board
+  end
+  turn(board)
+  #display_board(board)
+end
