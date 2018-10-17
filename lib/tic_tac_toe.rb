@@ -63,3 +63,11 @@ end
 def current_player(board)
   turn_count(board).even? ? "X" : "O"
 end
+
+def won?(board)
+  #board.find{|combo| combo.all?{|position| (position=="X")||(position=="O")} ? combo : nil}
+  WIN_COMBINATIONS.find{|combo| 
+    combo.all?{|position| board[position] == "X"} ||
+    combo.all?{|position| board[position] == "O"}
+  } 
+end #won
